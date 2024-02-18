@@ -1,11 +1,16 @@
-//for components reusabilty ,we use props
-//here like js, we need to pass one paramater which is object holds all received properties as attributes called props(properties)
-//props are another way passing data from component a to b.
+
 import "./ExpenseItem.css";
 function ExpenseItem(props) {
+  const month = props.date.toLocaleString('en-US',{month:'long'})
+  const day = props.date.toLocaleString('en-US',{day:'2-digit'})
+  const year = props.date.getFullYear()
   return (
     <div className="expense-item">
-      <div>{props.date.toISOString()}</div>
+      <div>
+        <div>{month}</div>
+        <div>{year}</div>
+        <div>{day}</div>
+      </div>
       <div className="expense-item__description">
         <h2>{props.title}</h2>
         <h3>{props.E}</h3>
