@@ -18,3 +18,6 @@ function ExpenseItem() {
 }
 
 export default ExpenseItem;
+
+//to output dynamic data,react have that syntax curly braces which are dynamic place holders
+//in curly braces we can run basic expression
